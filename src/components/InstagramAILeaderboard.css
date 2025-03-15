@@ -466,6 +466,11 @@
     margin-right: 4px;
   }
   
+  .growth-label {
+    margin-right: 2px;
+    font-size: 12px;
+  }
+  
   .growth-badge {
     padding: 4px 8px;
     border-radius: 9999px;

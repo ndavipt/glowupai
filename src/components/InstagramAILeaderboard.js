@@ -378,7 +378,7 @@ const InstagramAILeaderboard = () => {
                             <div className="growth-metrics">
                               <div className={`growth-number ${(growth24h.change || 0) >= 0 ? 'positive' : 'negative'}`}>
                                 {(growth24h.change || 0) >= 0 ? <TrendingUp size={16} /> : <TrendingDown size={16} />}
-                                {(growth24h.change || 0) >= 0 ? '+' : ''}{formatNumber(growth24h.change || 0)}
+                                <span className="growth-label">24h: </span>{(growth24h.change || 0) >= 0 ? '+' : ''}{formatNumber(growth24h.change || 0)}
                               </div>
                               <div className={`growth-badge ${(growth12h.change || 0) >= 0 ? 'positive' : 'negative'}`}>
                                 12h: {(growth12h.change || 0) >= 0 ? '+' : ''}{formatNumber(growth12h.change || 0)}

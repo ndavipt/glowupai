@@ -55,7 +55,7 @@ const About = () => {
               />
               <span>Leaderboard</span>
             </div>
-            <div className="sidebar-item">
+            <div className="sidebar-item" onClick={() => navigate('/submit')}>
               <img 
                 src="/submit-icon.png" 
                 alt="Submit Icon" 

@@ -3,12 +3,14 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
 import InstagramAILeaderboard from './components/InstagramAILeaderboard';
 import About from './components/About';
+import SubmitAccount from './components/SubmitAccount';
 
 function App() {
   return (
     <Router>
       <Routes>
         <Route path="/" element={<InstagramAILeaderboard />} />
+        <Route path="/submit" element={<SubmitAccount />} />
         <Route path="/about" element={<About />} />
       </Routes>
     </Router>

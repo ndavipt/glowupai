@@ -1,5 +1,4 @@
 import React from 'react';
-import { Instagram, User, Users, Info } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import './InstagramAILeaderboard.css';
 
@@ -11,18 +10,26 @@ const About = () => {
       {/* Top navigation bar */}
       <header className="leaderboard-header">
         <div className="header-title" style={{ cursor: 'pointer' }} onClick={() => navigate('/')}>
-          <Instagram className="header-icon" />
-          <h1>GlowUpAI</h1>
+          <img 
+            src="/woman-alt.svg" 
+            alt="Woman Icon" 
+            style={{ height: '40px', marginRight: '10px' }} 
+          />
+          <img 
+            src="/glowuplogo_wht_blueaccent_v3.svg" 
+            alt="GlowUpAI Logo" 
+            style={{ height: '40px', marginRight: '10px' }} 
+          />
         </div>
         
         <div className="header-buttons">
           <button className="nav-button" onClick={() => navigate('/')}>
-            <User size={16} />
+            <img 
+              src="/submit-icon.png" 
+              alt="Submit Icon" 
+              style={{ width: '16px', height: '16px', marginRight: '8px' }} 
+            />
             <span>Submit Account</span>
-          </button>
-          <button className="nav-button active">
-            <Info size={16} />
-            <span>About</span>
           </button>
         </div>
       </header>
@@ -41,15 +48,27 @@ const About = () => {
               className="sidebar-item" 
               onClick={() => navigate('/')}
             >
-              <Users size={18} />
+              <img 
+                src="/man.png" 
+                alt="Leaderboard Icon" 
+                style={{ width: '18px', height: '18px', marginRight: '8px' }} 
+              />
               <span>Leaderboard</span>
             </div>
             <div className="sidebar-item">
-              <User size={18} />
+              <img 
+                src="/submit-icon.png" 
+                alt="Submit Icon" 
+                style={{ width: '18px', height: '18px', marginRight: '8px' }} 
+              />
               <span>Submit Account</span>
             </div>
             <div className="sidebar-item active">
-              <Info size={18} />
+              <img 
+                src="/info.png" 
+                alt="About Icon" 
+                style={{ width: '18px', height: '18px', marginRight: '8px' }} 
+              />
               <span>About</span>
             </div>
           </nav>

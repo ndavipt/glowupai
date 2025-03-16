@@ -11,7 +11,7 @@ const About = () => {
       <header className="leaderboard-header">
         <div className="header-title" style={{ cursor: 'pointer' }} onClick={() => navigate('/')}>
           <img 
-            src="/woman-alt.svg" 
+            src="/woman_2.svg" 
             alt="Woman Icon" 
             style={{ height: '40px', marginRight: '10px' }} 
           />

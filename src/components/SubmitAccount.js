@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './InstagramAILeaderboard.css';
+import MobileNav from './MobileNav';
 
 const SubmitAccount = () => {
   const navigate = useNavigate();
@@ -25,8 +26,19 @@ const SubmitAccount = () => {
       // Mock API call - will be replaced with actual backend integration
       await new Promise(resolve => setTimeout(resolve, 1500));
       
+      // Store submission using StorageAdapter
+      import('../services/StorageAdapter').then(module => {
+        const StorageAdapter = module.default;
+        StorageAdapter.addPendingAccount({
+          id: Date.now(), // Use timestamp as ID
+          username: username.trim(),
+          submittedAt: new Date().toISOString(),
+          status: 'pending'
+        });
+      });
+      
       // Simulate success
-      setSuccessMessage(`@${username} was successfully submitted for tracking!`);
+      setSuccessMessage(`@${username} was successfully submitted and will be reviewed by our team before being added to the leaderboard.`);
       setUsername('');
     } catch (error) {
       setErrorMessage('Error submitting account. Please try again.');
@@ -63,6 +75,9 @@ const SubmitAccount = () => {
             <span>Submit Account</span>
           </button>
         </div>
+        
+        {/* Mobile Navigation */}
+        <MobileNav activePage="submit" />
       </header>
       
       <div className="main-container">

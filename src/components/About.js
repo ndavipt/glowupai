@@ -1,6 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import './InstagramAILeaderboard.css';
+import MobileNav from './MobileNav';
 
 const About = () => {
   const navigate = useNavigate();
@@ -11,12 +12,12 @@ const About = () => {
       <header className="leaderboard-header">
         <div className="header-title" style={{ cursor: 'pointer' }} onClick={() => navigate('/')}>
           <img 
-            src="/woman_2.svg" 
+            src="/woman_2_blue.svg" 
             alt="Woman Icon" 
             style={{ height: '40px', marginRight: '10px' }} 
           />
           <img 
-            src="/glowuplogo_wht_blueaccent_v3.svg" 
+            src="/glowuplogo_wht_blueaccent_v4.svg" 
             alt="GlowUpAI Logo" 
             style={{ height: '40px', marginRight: '10px' }} 
           />
@@ -32,6 +33,9 @@ const About = () => {
             <span>Submit Account</span>
           </button>
         </div>
+        
+        {/* Mobile Navigation */}
+        <MobileNav activePage="about" />
       </header>
       
       <div className="main-container">
